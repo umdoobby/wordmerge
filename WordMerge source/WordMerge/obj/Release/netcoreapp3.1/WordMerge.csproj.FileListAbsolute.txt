@@ -1,0 +1,87 @@
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\bin\Release\netcoreapp3.1\WordMerge.exe
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\bin\Release\netcoreapp3.1\help-info\dev-guide.htm
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\dev-figA.png
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\dev-FigB.png
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\dev-figC.gif
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\dev-figD.png
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\dev-figE.png
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\dev-figF.png
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\figA.gif
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\figB.gif
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\figC.png
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\figD.png
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\figE.png
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\bin\Release\netcoreapp3.1\help-info\intro.htm
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\bin\Release\netcoreapp3.1\Interop.Microsoft.Office.Core.dll
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\bin\Release\netcoreapp3.1\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\bin\Release\netcoreapp3.1\WordMerge.deps.json
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\bin\Release\netcoreapp3.1\WordMerge.runtimeconfig.json
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\bin\Release\netcoreapp3.1\WordMerge.runtimeconfig.dev.json
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\bin\Release\netcoreapp3.1\WordMerge.dll
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\bin\Release\netcoreapp3.1\WordMerge.pdb
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\obj\Release\netcoreapp3.1\WordMerge.csprojAssemblyReference.cache
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\obj\Release\netcoreapp3.1\Interop.Microsoft.Office.Core.dll
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\obj\Release\netcoreapp3.1\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\obj\Release\netcoreapp3.1\WordMerge.csproj.ResolveComReference.cache
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\obj\Release\netcoreapp3.1\WordMerge.AssemblyInfoInputs.cache
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\obj\Release\netcoreapp3.1\WordMerge.AssemblyInfo.cs
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\obj\Release\netcoreapp3.1\WordMerge.dll
+C:\Users\umdoo\Desktop\git\FFCU-Challenge\WordMerge\obj\Release\netcoreapp3.1\WordMerge.pdb
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\WordMerge.exe
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\help-info\dev-guide.htm
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\dev-figA.png
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\dev-FigB.png
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\dev-figC.gif
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\dev-figD.png
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\dev-figE.png
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\dev-figF.png
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\figA.gif
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\figB.gif
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\figC.png
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\figD.png
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\figE.png
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\help-info\intro.htm
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\Interop.Microsoft.Office.Core.dll
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\WordMerge.deps.json
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\WordMerge.runtimeconfig.json
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\WordMerge.runtimeconfig.dev.json
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\WordMerge.dll
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\WordMerge.pdb
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\obj\Release\netcoreapp3.1\WordMerge.csprojAssemblyReference.cache
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\obj\Release\netcoreapp3.1\Interop.Microsoft.Office.Core.dll
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\obj\Release\netcoreapp3.1\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\obj\Release\netcoreapp3.1\WordMerge.csproj.ResolveComReference.cache
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\obj\Release\netcoreapp3.1\WordMerge.AssemblyInfoInputs.cache
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\obj\Release\netcoreapp3.1\WordMerge.AssemblyInfo.cs
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\obj\Release\netcoreapp3.1\WordMerge.dll
+C:\Users\umdoo\Desktop\git\WordMerge Source\WordMerge\obj\Release\netcoreapp3.1\WordMerge.pdb
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\WordMerge.exe
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\help-info\dev-guide.htm
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\dev-figA.png
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\dev-FigB.png
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\dev-figC.gif
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\dev-figD.png
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\dev-figE.png
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\dev-figF.png
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\figA.gif
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\figB.gif
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\figC.png
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\figD.png
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\help-info\imgs\figE.png
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\help-info\intro.htm
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\Interop.Microsoft.Office.Core.dll
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\WordMerge.deps.json
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\WordMerge.runtimeconfig.json
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\WordMerge.runtimeconfig.dev.json
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\WordMerge.dll
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\bin\Release\netcoreapp3.1\WordMerge.pdb
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\obj\Release\netcoreapp3.1\WordMerge.csprojAssemblyReference.cache
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\obj\Release\netcoreapp3.1\Interop.Microsoft.Office.Core.dll
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\obj\Release\netcoreapp3.1\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\obj\Release\netcoreapp3.1\WordMerge.csproj.ResolveComReference.cache
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\obj\Release\netcoreapp3.1\WordMerge.AssemblyInfoInputs.cache
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\obj\Release\netcoreapp3.1\WordMerge.AssemblyInfo.cs
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\obj\Release\netcoreapp3.1\WordMerge.dll
+C:\Users\umdoo\Documents\GitHub\wordmerge\WordMerge Source\WordMerge\obj\Release\netcoreapp3.1\WordMerge.pdb

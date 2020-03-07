@@ -1,0 +1,16 @@
+C:\Users\umdoo\source\repos\FFCU-Challenge\FFCU-Challenge\bin\Release\netcoreapp3.1\win-x64\FFCU-Challenge.exe
+C:\Users\umdoo\source\repos\FFCU-Challenge\FFCU-Challenge\bin\Release\netcoreapp3.1\win-x64\FFCU-Challenge.deps.json
+C:\Users\umdoo\source\repos\FFCU-Challenge\FFCU-Challenge\bin\Release\netcoreapp3.1\win-x64\FFCU-Challenge.runtimeconfig.json
+C:\Users\umdoo\source\repos\FFCU-Challenge\FFCU-Challenge\bin\Release\netcoreapp3.1\win-x64\FFCU-Challenge.runtimeconfig.dev.json
+C:\Users\umdoo\source\repos\FFCU-Challenge\FFCU-Challenge\bin\Release\netcoreapp3.1\win-x64\FFCU-Challenge.dll
+C:\Users\umdoo\source\repos\FFCU-Challenge\FFCU-Challenge\bin\Release\netcoreapp3.1\win-x64\FFCU-Challenge.pdb
+C:\Users\umdoo\source\repos\FFCU-Challenge\FFCU-Challenge\bin\Release\netcoreapp3.1\win-x64\Interop.Microsoft.Office.Core.dll
+C:\Users\umdoo\source\repos\FFCU-Challenge\FFCU-Challenge\bin\Release\netcoreapp3.1\win-x64\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\umdoo\source\repos\FFCU-Challenge\FFCU-Challenge\obj\Release\netcoreapp3.1\win-x64\FFCU-Challenge.csprojAssemblyReference.cache
+C:\Users\umdoo\source\repos\FFCU-Challenge\FFCU-Challenge\obj\Release\netcoreapp3.1\win-x64\Interop.Microsoft.Office.Core.dll
+C:\Users\umdoo\source\repos\FFCU-Challenge\FFCU-Challenge\obj\Release\netcoreapp3.1\win-x64\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\umdoo\source\repos\FFCU-Challenge\FFCU-Challenge\obj\Release\netcoreapp3.1\win-x64\FFCU-Challenge.csproj.ResolveComReference.cache
+C:\Users\umdoo\source\repos\FFCU-Challenge\FFCU-Challenge\obj\Release\netcoreapp3.1\win-x64\FFCU-Challenge.AssemblyInfoInputs.cache
+C:\Users\umdoo\source\repos\FFCU-Challenge\FFCU-Challenge\obj\Release\netcoreapp3.1\win-x64\FFCU-Challenge.AssemblyInfo.cs
+C:\Users\umdoo\source\repos\FFCU-Challenge\FFCU-Challenge\obj\Release\netcoreapp3.1\win-x64\FFCU-Challenge.dll
+C:\Users\umdoo\source\repos\FFCU-Challenge\FFCU-Challenge\obj\Release\netcoreapp3.1\win-x64\FFCU-Challenge.pdb

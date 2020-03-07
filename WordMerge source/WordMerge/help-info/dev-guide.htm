@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Lightbox -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha256-HAaDW5o2+LelybUhfuk0Zh2Vdk8Y2W2UeKmbaXhalfA=" crossorigin="anonymous" />
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a19c36e3f0.js" crossorigin="anonymous"></script>
+    
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+    
+    <!-- some custom styles -->
+    <style>
+      .mono { 
+        font-family: 'Roboto Mono', monospace;
+      }
+      
+      .side-image{
+        width: 75%; 
+        display: block; 
+        padding-top: 5px; 
+        padding-bottom: 5px;
+      }
+      
+      .thick-padding{
+        padding-bottom: 150px;
+      }
+      
+      .thin-padding{
+        padding-bottom: 25px;
+      }
+      
+      .footer {
+        background-color: #f5f5f5;
+        border-top: 1px solid rgba(0,0,0,.125);
+      }
+      
+      ol.custom-num {
+        list-style: none;
+      }
+      
+      ol.custom-num>li:before {
+        content: attr(seq) ". ";
+      }
+    </style>
+
+    <title>WordMerge Help | Developer's Guide</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+          <a class="navbar-brand" href="https://github.com/umdoobby/wordmerge" target="_blank">WordMerge Documentation</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="intro.htm"><i class="fas fa-rocket"></i>&nbsp;Introduction</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="dev-guide.htm"><i class="fas fa-code"></i>&nbsp;Developer's Guide <span class="sr-only">(current)</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+    <main role="main">
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">Developer's Guide</h1>
+          <p>Details on how to implement WordMerge into your environment.</p>
+        </div>
+      </div>
+      
+      <div class="container">
+        
+        <h3>Overview</h3>
+        <p>Here we will talk about some of the more advanced options an uses for WordMerge.EXE. WordMerge is a fully contained and fully portable executable that can be easily and descretely deployed to end user computers. From there the tool can be launched remotely, schedualed to run automatically, or it can be implemented in a batch file to allow  users to more easily work with the tool. We will also go over how to set up new template files and new  source data files to better customize WordMerge for your uses.</p>
+        
+        <div class="thin-padding"></div>
+        <hr>
+        <div class="thin-padding"></div>
+        
+        <div class="row">
+          <div class="col">
+            <h3><i class="fas fa-hard-hat"></i>&nbsp;Functional Princical</h3>
+            <p>WordMerge's core functionality is pretty simple, it works as a complicated and automatic find and replace essentially. With the "<span class="mono">/mrgsrc</span>" argument you are able to get it a "<span class="mono">.csv</span>" file. <span class="text-muted"><em>(Note the delimiter can be changed.)</em></span> It expects that file to be formatted so that the first defines which colum is the "Template" column and the other headers should be the field you are going to replace. The program reads in that file, parces at the delimiters, and starts looking for the template files. The template files are a set of standard "<span class="mono">.docx</span>" document files located all in one folder. <em>It is strongly recommended that the template directory be specified, however, the program will look for them in the working directory if not explicitly stated with the "<span class="mono">/templates</span>" argument.</em> The program works line by line going down the "<span class="mono">.csv</span>" file provided. It first grabs the template for that line from the "Template" column and tries to find a template "<span class="mono">.docx</span>" with the <em>exact</em> name specified in the "<span class="mono">.csv</span>". If it able to find the template it will open the file it will open the template and start going through every other column in the "<span class="mono">.csv</span>" file. It grabs the value to search for from the title of the column in the provided "<span class="mono">.csv</span>" file and will replace <em>every</em> instance of that text <em>where</em> the text is surrounded by "<span class="mono">{ }</span>" wildcard characters. Not every column needs to be column needs to be utilized for it to be able to do this but it is highly recommended that every row have a space for every column, you risk instability or improper reading of data if this rule is not followed. After it reads through trying to find and replace every column it will save the document with the name "<span class="mono">[current time]-[line number].docx</span>". It is strongly recommended that you specify an output folder with the "<span class="mono">/outfolder</span>" argument. If you do not it will save the files in the current working directory. It does attempt to correct spacing issues created by the replacing process, however it is not perfect and will let you know in the console as well as in the error log. Once the program starts making changes to the files in your computer it will either create or open a specified error log file with the "<span class="mono">/errorlog</span>" argument. It is recommended that you specify an errorlog during normal use, if you do not it wil create the file "<span class="mono">[current time]-errors.log</span>" in its working directory. If a log is specified it will try to find the file, open it, and just append any new information onto the end. If the doesn't exist it will create one with your specified name in the specified directory.</p>
+            <p>Now that is alot of words, lets start talking about the individual components.</p>
+          </div>
+        </div>
+        
+        <div class="thin-padding"></div>
+        <hr>
+        <div class="thin-padding"></div>
+        
+        <div class="row">
+          <div class="col">
+            <h3><i class="fas fa-file-export"></i>&nbsp;The Source Information</h3>
+            <p>WordMerge <em>must</em> be fed a file that is the source of its information and it does expect this file to be formatted a particular way. Below in Figure A you will see a file formated like how the program expects. There are a few things to note with this demo file:</p>
+            <ol>
+              <li>Note the delimiter, in this case the delimiter is the "<span class="mono">|</span>" character. <em>This is the delimiter that the program expects if you do not specify a delimiter with the "<span class="mono">/delimiter</span>" argument.</em> The program is capable of parsing the data at any character you choose like a comma. Also notice that the delimiter character in the demo is only every shows up between </li>
+              <li>Note the first line of that file. Think of this as the header or title of the columns in the table. These can be any word, string, etc. that you like. As the program is going through the table, row by row, column by column, it refers this title for what it is looking to replace in the template file. <strong>However, note the "Template" column, this is not an optional column! This column is required for the program to know what template file it need to edit.</strong> Looking through the data in the "Template" column you can see values like "TestTemplateA" and "TestTemplateB"; those are <em>exactly</em> the files the program is going to look for in the specified templates folder. <strong>Do not place the file extension "<span class="mono">.docx</span>" in this field! The program is already assuming you are goind to have it work with "<span class="mono">.docx</span>" files!</strong></li>
+              <li>Notice how a few of the cells in this file are blank. Or to put it another way, notice that some of the lines have no text between the delimiters or at the end of the line. The program will read this as a blank space where it doesn't need to add anything to the resulting template, rather it just finds and removed any mentions of that field in the template. This <em>may</em> result in gramatical or spelling issues in the resulting file, however, it does attempt to be prevent that from happening. If there are any possible errors created by this it will report them in the error log and in the console window.</li>
+              <li>Looking back at the first line, notice that it doesn't begin or end in a delimiter. If there is a delimiter at the beginning or end it will try to read in that empty field as a new filed to be replaced. If an erronious delimiter is left at the end or beginning of the line this <em>may</em> have unintended effects on the resulting files.</li>
+            </ol>
+            <h4>Making a New Source File</h4>
+            <p>The easiest way to create a new source file is using a database or spreadsheet program like Microsoft Excel or Microsoft Access. Most of those programs have an option to export the table or spreadsheet as a "<span class="mono">.csv</span>" file. Most of the time they will even let you set custom delimiters and have an option to include headers as the first row, if that isn't already the case. It is still recommended that you review this sheet for any possible issues or errors after being exported, but, this remains the fastest and more efficient way to create a file for WordMerge. Look at Figures B and C below for how the demo in Figure A looks in Excel and what exporting it to a "<span class="mono">.csv</span>" file looks like. If you like you can make this source file by hand, you absolutely can. After all this is just a text file that it's reading in. You can use the demo file in Figure A below as a guide but lets still go through the process step by step:</p>
+            <ol>
+              <li>Start with the first line, it is arguably the most important. This line sets up the structure of the rest of the file. It's recommended that you start with the "Template" column as in the demo below. After the word "Template" you just have to use whatever character you want to be the delimiter. Again the program assumes that "<span class="mono">|</span>" is the delimiter of the file so it is recommended to just use that as your delimiter. <em>Spaces between the text and the delimiters do not matter as they will not be read into the program.</em> After that you start naming what you want to look for in the templates to replace all again separated by the delimiter. Previously we spoke about the "<span class="mono">{ }</span>" wildcard characters used in the template, do <strong>not</strong> include those in this file. We will speak more on those wildcards as we talk about making a new template file below. After you type in all of the words or strings you want to search for an replace, that's it for the first line! You're ready to start entering what you want to actually be copied into the templates! <strong>Two final notes about the headers; they are case sensitive. "Template" must have a capital "T" and what you want to replace in the template must match with capitalization and everything. Secondly, this line is not counted as number 1 like you might expect, in the eyes of the program this line is line 0 as it starts counting from 0.</strong></li>
+              <li>Now we start entering the data you want put into the templates. Looking at the demo in Figure A again, see how every line as the same number of their chosen delimiters, the "<span class="mono">|</span>" character. Even if there is nothing between two delimiters, every line still has the same number of them. This is how you should enter your data, every line should have the same number of your chosen delimiters, even if the line is longer as has more information in it. What's between the delimiters doesn't matter, its all treated the same way in the eyes of the program. Assuming you put your "Template" column first, that is the first thing you want to enter. This should be the name of the template file that you want it to make the replacements in. <em>Remeber capitalization matters!</em> After that you can enter in any word, sentence, etc. that you want between the remaining delimiters. Just remember what you told it to look for in the first line at is what its going to look for. In other words, what you told it to look for after the second delimiter will always be replaced by what you type after the second delimiter on this line.</li>
+              <li>After that the sky is the limit! Just remember; keep the name of the template in the same place on every line, don't use the delimiter anywhere other then where you want the file separated, always have the same number of delimiters on every line. Follow those three rules and you will have no issues making this file!</li>
+            </ol>
+            <p>Below are th three main figures discussed in this section; Figures A, B and C. In this example, figure A is what you would give the program with the "<span class="mono">/mrgsrc</span>" argument. Figure B is what that file looks like as a table in Microsoft Excel, look at that and compare it to Figure A and try to see how the information in the text file is in a table. Figure C is demonstrating the process of exporting the Excel table in Figure B as a "<span class="mono">.csv</span>" file. If you are using Excel, you should be able to follow similar steps to export your own "<span class="mono">.csv</span>" file. Figure D is what the same demo file in Figure A looks like after the export to a "<span class="mono">.csv</span>" file, notice that the delimiter changed.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="card mb-3">
+              <a href="imgs/dev-figA.png" data-toggle="lightbox" data-title="Demo source file" data-footer="Figure A" data-gallery="customSrcFile"><center><img class="img-fluid side-image" src="imgs/dev-figA.png"></center></a>
+              <div class="card-footer text-muted">
+                Figure A | Click to Expand&nbsp;<i class="fas fa-expand-alt"></i>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-3">
+            <div class="card mb-3">
+              <a href="imgs/dev-FigB.png" data-toggle="lightbox" data-title="Demo file in Excel" data-footer="Figure B" data-gallery="customSrcFile"><center><img class="img-fluid side-image" src="imgs/dev-FigB.png"></center></a>
+              <div class="card-footer text-muted">
+                Figure B | Click to Expand&nbsp;<i class="fas fa-expand-alt"></i>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-3">
+            <div class="card mb-3">
+              <a href="imgs/dev-figC.gif" data-toggle="lightbox" data-title="Exporting to a .csv" data-footer="Figure C" data-gallery="customSrcFile"><center><img class="img-fluid side-image" src="imgs/dev-figC.gif"></center></a>
+              <div class="card-footer text-muted">
+                Figure C | Click to Expand&nbsp;<i class="fas fa-expand-alt"></i>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-3">
+            <div class="card mb-3">
+              <a href="imgs/dev-figD.png" data-toggle="lightbox" data-title="Demo file after being exported" data-footer="Figure D" data-gallery="customSrcFile"><center><img class="img-fluid side-image" src="imgs/dev-figD.png"></center></a>
+              <div class="card-footer text-muted">
+                Figure D | Click to Expand&nbsp;<i class="fas fa-expand-alt"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="thin-padding"></div>
+        <hr>
+        <div class="thin-padding"></div>
+        
+        <div class="row">
+          <div class="col">
+            <h3><i class="fas fa-file-invoice"></i>&nbsp;Templates</h3>
+            <p>Lets talk about building templates. Templates are what we are calling a standard Microsoft Word document with certain special fields in it. Looking in Figure E below you can see what we mean by fields. WordMerge knows to look for what to replace in a template by the special characters; "<span class="mono">{</span>" and "<span class="mono">}</span>". Looking at Figure E below you should notice that there are certain words surrounded by those special "<span class="mono">{ }</span>" characters are highlighted. Those are "fields" and are what we are trying to replace. Going back to the first line of the source mentioned above, everything except for the "Template" column is what we are going to look for in the template. We look for the special characters "<span class="mono">{</span>" and "<span class="mono">}</span>" to try and keep the program from replacing other stuff in the template.</p>
+            <p>Creating a new template is very easy. Start by making a new Word document or taking a document you have already set up looking how you want it. You then need to start looking what you want to replace. Everywhere you want something replaced come up with a unique name for the field like "<span class="mono">mergefield1</span>", "<span class="mono">mergefield2</span>", "<span class="mono">mergefield3</span>", etc. used in the demo here and all surrounded with the special characters "<span class="mono">{</span>" and "<span class="mono">}</span>". These field names are what you are putting in the that first list of the source file talked about above. Compare whats on line one in the text file in Figure A and what we are using as fields in Figures E and F below. See how they are all the same? When you name the fields you are naming what the program is going to look for and you tell it what to look for in that first line of the source document! The special characters "<span class="mono">{</span>" and "<span class="mono">}</span>" in the template document is just how you tell the program that, "Yes, this is a spot where I want you to try and replace something." You can use the same field multiple times in the same document as well, just know that everywhere it finds that field it will replace it. Also if a field is mentioned in the template document that isn't in the source document it will be ignored. It is case sensative, and you shouldn't have any extra spaces between "<span class="mono">{</span>", your field name, and "<span class="mono">}</span>" as this could trip up the system. Running a couple of tests doesn't hurt anything as well!</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card mb-3">
+              <a href="imgs/dev-figE.png" data-toggle="lightbox" data-title="Demo template 1" data-footer="Figure E" data-gallery="customTemplate"><center><img class="img-fluid side-image" src="imgs/dev-figE.png"></center></a>
+              <div class="card-footer text-muted">
+                Figure E | Click to Expand&nbsp;<i class="fas fa-expand-alt"></i>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="card mb-3">
+              <a href="imgs/dev-FigF.png" data-toggle="lightbox" data-title="Demo template 2" data-footer="Figure F" data-gallery="customTemplate"><center><img class="img-fluid side-image" src="imgs/dev-FigF.png"></center></a>
+              <div class="card-footer text-muted">
+                Figure F | Click to Expand&nbsp;<i class="fas fa-expand-alt"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="thin-padding"></div>
+        <hr>
+        <div class="thin-padding"></div>
+        
+        <div class="row">
+          <div class="col">
+            <h3><i class="fas fa-tools"></i>&nbsp;Advanced Usage</h3>
+            <p>Finally lets go over some of the more advanced usage cases for WordMerge.</p>
+            <h4>Remote Administration</h4>
+            <p>WordMerge is a Command Line utility and as such any remote management utility that allows you to remotely run commands on the host computer. The host does need to be able to read the probram executable of course. It can be invoked from a network drive, copied over onto the host, or installed. The executable contains all of the required packages and will extract them all into a temprorary file in order to run.The program does <strong>not</strong> have a silent mode as of yet so a console window will open on the host computer. It is also strongly recommended that you fully load it with arguments to read an write the files in specific locations to avoid it making a mess of the host computer.</p>
+            <h4>Part of Another Script or Program</h4>
+            <p>The program can easily be integrated to a "<span class="mono">.bat</span>" file to enable end users to more easily use the tool or to automate it as part of a process. You can also call it from another program to much the same effect. Just remember that a large source text file could mean long execution times. The program will exit with a veriaty of exit codes that will tell you a number of different errors:</p>
+            <ol class="custom-num">
+              <li seq="-1">Completed but there were warnings</li>
+              <li seq="0">Completed with no errors</li>
+              <li seq="1">An unknown argument was given</li>
+              <li seq="2">Specified file or directory doesn't exist</li>
+              <li seq="3">An argument was unrecognized</li>
+              <li seq="4">An argument was supplied without the required path to a file or folder or was incomplete</li>
+              <li seq="5">The arguments were too ambiguous</li>
+              <li seq="6">There was an error trying to create a file or folder</li>
+              <li seq="7">No source file was specified</li>
+              <li seq="8">There was an error trying to open and read a file</li>
+              <li seq="9">The specified file was not parsed correctly</li>
+              <li seq="10">The specified folder provided was empty</li>
+              <li seq="11">Could not edit the specified file or folder</li>
+              <li seq="12">An incorrect path was provided</li>
+            </ol>
+            <h4>Scheduling</h4>
+            <p>The recommended way you schedul this tool to run in Windows is using the Task Scheduler. There are two main ways to acomplish this; either through the "<span class="mono">taskschd.msc</span>" Task Scheduler snap in, or with with "<span class="mono">SCHTASKS</span>" applet in the Command Line. Using the Task Scheduler allows you to run the tool at certain times of the day, on start up, on log in, etc. Below is an example command to schedual WordMerge to run every day at 11:00 AM.</p>
+            <div class="card mono">
+              <div class="card-body">
+                SCHTASKS /CREATE /SC DAILY /TN "WordMerge\WordMerge.exe" /TR "C:\WordMerge\WordMerge.exe /mrgsrc C:\WordMerge\mergefile.txt /templates C:\WordMerge\templates /outfolder C:\WordMerge\output /errorlog C:\WordMerge\errors.log" /ST 11:00
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="thick-padding"></div>
+      </div>
+      
+      <footer class="footer mt-auto py-3">
+        <div class="container">
+          <p class="text-muted">Author: Evan Spiker | Created: 3/3/2020 | v1.0</p>
+        </div>
+      </footer>      
+    </main>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Lightbox script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js" integrity="sha256-Y1rRlwTzT5K5hhCBfAFWABD4cU13QGuRN6P5apfWzVs=" crossorigin="anonymous"></script>
+    <!-- invoke the lightbox -->
+    <script>
+      $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+    </script>
+  </body>
+</html>

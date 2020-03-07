@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Lightbox -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha256-HAaDW5o2+LelybUhfuk0Zh2Vdk8Y2W2UeKmbaXhalfA=" crossorigin="anonymous" />
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a19c36e3f0.js" crossorigin="anonymous"></script>
+    
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+    
+    <!-- some custom styles -->
+    <style>
+      .mono { 
+        font-family: 'Roboto Mono', monospace;
+      }
+      
+      .side-image{
+        width: 75%; 
+        display: block; 
+        padding-top: 5px; 
+        padding-bottom: 5px;
+      }
+      
+      .thick-padding{
+        padding-bottom: 150px;
+      }
+      
+      .thin-padding{
+        padding-bottom: 25px;
+      }
+      
+      .footer {
+        background-color: #f5f5f5;
+        border-top: 1px solid rgba(0,0,0,.125);
+      }
+    </style>
+
+    <title>WordMerge Help | Introduction</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+          <a class="navbar-brand" href="https://github.com/umdoobby/wordmerge" target="_blank">WordMerge Documentation</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="intro.htm"><i class="fas fa-rocket"></i>&nbsp;Introduction <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="dev-guide.htm"><i class="fas fa-code"></i>&nbsp;Developer's Guide</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+    <main role="main">
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">Introduction to WordMerge</h1>
+          <p>Learn how to use your new tool and how to get comfortable with its different options.</p>
+        </div>
+      </div>
+      
+      <div class="container">
+        
+        <h3>Welcome!</h3>
+        <p>WordMerger.EXE is a useful tool when you need to customize or personalize a large number of Word documents based on a set list of information. A great example is if you are sending out a large number of letters to different people you have in a spreadsheet. You can export that sheet into a comma separated value table, point this application to it as well as the standard letters you wrote, and it will spit out the customized documents! Here we will be going over all of the options the application gives you along with some examples of how you can use it to get the most out of it.</p>
+        
+        <div class="thin-padding"></div>
+        <hr>
+        <div class="thin-padding"></div>
+        
+        <div class="row">
+          <div class="col">
+            <h3><i class="fas fa-rocket"></i>&nbsp;Basic Usage</h3>
+            <p>Let’s get right into it, so the first thing you might notice is that when you try to run it nothing happens. That is because this program can only be run from the command line. Yes, I’m talking about the black window where you type everything in manually, exactly like it was back in the 80’s. To get started lets quickly go over how you can find it and get started. </p>
+            <ol>
+              <li>
+                Opening the command line.
+                <ul>
+                  <li>Start by opening the start menu (usually located in the lower left-hand corner of your screen); when you do you should have a small text box at the bottom of the menu like what is shown below in figure A.</li>
+                  <li>Make sure your cursor is in the text box and type the letters “<span class="mono">cmd</span>” and hit the <span class="mono">&lt;Enter&gt;</span> key. If that doesn’t work, while in the start menu scroll down until you find the folder titled “Windows System” and click on it to expand it. You should see “Command Prompt” as an option like in figure B.</li>
+                </ul>
+              </li>
+              <li>
+                Once you have the command line open you will see a black box like what’s in figure B. Now the command line isn’t very smart and you have to tell it where to look for the program. Type in the full path to the program as shown in figure B. <em>It’s important to note that your path will most likely be different from what is show in the picture.</em>
+                <ul>
+                  <li>You can hit enter at this point to verify that you typed the path correctly. If you did you should get a message in the command line window like what is in figure C.</li>
+                </ul>
+              </li>
+              <li>
+                Now you have to point it to the source of your information. This normally as simple as a text file where all of the information is seperated with a character like a "<span class="mono">|</span>" or a "<span class="mono">,</span>". You do that with the "<span class="mono">/mrgsrc</span>" command followed by the path to the text file. You type this next to the location of the WordMerge file path you just typed in. There is an example of this in figure D, however, <em>my paths are most likely different from yours</em>. This <em>might</em> be all you need to do. You didn't give the program alot of information so its going to make some assumptions:
+                <ul>
+                  <li>Because you didn't specifically tell it where to find the templates its modifying it will assume they are just in the same folder as the program.</li>
+                  <li>Because you didn't specifically tell it where to place the completed files it will drop them all in the same folder as the program.</li>
+                  <li>Because you didn't specifically tell it where to record any errors it will make a new file in the same folder as the program to record them for you.</li>
+                  <li>Because you didn't tell it otherwise, the program is going to assume the separator in the source text file is the character is "c".</li>
+                </ul>
+                But don't worry we can tell it where to find everything! Just remember the "<span class="mono">/mrgsrc</span>" command followed by the path to the text file is the bare minimum for the program to do it's work.
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card mb-3">
+              <a href="imgs/figA.gif" data-toggle="lightbox" data-title="Opening the Command Line" data-footer="Figure A" data-gallery="basicUse"><center><img class="img-fluid side-image" src="imgs/figA.gif"></center></a>
+              <div class="card-footer text-muted">
+                Figure A | Click to Expand&nbsp;<i class="fas fa-expand-alt"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card mb-3">
+              <a href="imgs/figB.gif" data-toggle="lightbox" data-title="Opening the Command Line a different way" data-footer="Figure B" data-gallery="basicUse"><center><img class="img-fluid side-image" src="imgs/figB.gif"></center></a>
+              <div class="card-footer text-muted">
+                Figure B | Click to Expand&nbsp;<i class="fas fa-expand-alt"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card mb-3">
+              <a href="imgs/figC.png" data-toggle="lightbox" data-title="Testing the program" data-footer="Figure C" data-gallery="basicUse"><center><img class="img-fluid side-image" src="imgs/figC.png"></center></a>
+              <div class="card-footer text-muted">
+                Figure C | Click to Expand&nbsp;<i class="fas fa-expand-alt"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card mb-3">
+              <a href="imgs/figD.png" data-toggle="lightbox" data-title="Telling it where to look" data-footer="Figure D" data-gallery="basicUse"><center><img class="img-fluid side-image" src="imgs/figD.png"></center></a>
+              <div class="card-footer text-muted">
+                Figure D | Click to Expand&nbsp;<i class="fas fa-expand-alt"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="thin-padding"></div>
+        <hr>
+        <div class="thin-padding"></div>
+        
+        <div class="row">
+          <div class="col">
+            <h3><i class="fas fa-cogs"></i>&nbsp;More Options</h3>
+            <p>Lets look as some of the other options you might want to use.</p>
+            <p>So everything being dropped in the same folder as the program is pretty inconvenient. There are a few other commands you can give the program to stop it from just making a bunch of assumptions and making a mess out of its folder. These are all commans that you use like the "<span class="mono">/mrgsrc</span>" we just talked about.</p>
+            <ul>
+              <li>
+                <h5><span class="mono">/templates "&lt;path to folder&gt;"</span></h5>
+                <ul>
+                  <li>
+                    This allows you to tell the program where to look for the templates rather than having it search in its folder. Replace the <span class="mono">&lt;path to folder&gt;</span> with the path to your folder and it will look there when you run it! <em>It does need to be a folder, if you point it directly to the template file it will give you an error.</em>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h5><span class="mono">/outfolder "&lt;path to folder&gt;"</span></h5>
+                <ul>
+                  <li>
+                    This allows you to tell the program where to place all of the files it processes. Replace the <span class="mono">&lt;path to folder&gt;</span> with the path to your folder and it will start spitting out files in that folder when you run it! <em>This also needs to be a folder, if you point it directly to the template file it will give you an error.</em>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h5><span class="mono">/errorlog "&lt;path to file&gt;"</span></h5>
+                <ul>
+                  <li>
+                    Tired of it making a new text file every time you run the program? Well add the command to the mix and replace the <span class="mono">&lt;path to file&gt;</span> with the path to your preferred text file and BAM it starts logging it's errors there. This way you can keep it from making a bunch of small files as you use it, saving you both space on your computer and hassle. Now with this command you can tell it to make the file, just tell it where you want the file and the name of the file like "errors.txt" and it will make the file and start using it. Next time you tell it to use that file it will know to just add the new errors to the end of that file! <em>This need to be a file that it can make changes to like a text file of it will give you an error.</em>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h5><span class="mono">/delimiter "&lt;character&gt;"</span></h5>
+                <ul>
+                  <li>
+                    Now sometimes the program assuming the source file is always separated with a "<span class="mono">|</span>" can be annoying, what if you need to use that character for something? Well with this you can tell it where to break apart your source file. A common separator is a comma! In programs like Excel, where you can separate and store data in tables, there is often the option to save the file as a comma separated values table, or a "<span class="mono">csv</span>". If you specify that you want the program to look for commas in your source file then it will be able to tabe that file fresh from Excel and apply the data to your Word templates! Great if you are keeping a large mailing list that you need customized letters for or anything like that! <em>You can only give it one single character, and more then that and it will give you an error.</em>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <p>You can mix and match all of these commands freely, the only required one is "<span class="mono">/mrgsrc</span>". Feel free to play with them and see what works best for you! Keep in mind that anything you don't specifically tell the program it will assume. For example, you can tell it where to find the templates but if you don't tell it where to drop the files it spits out then it will just place them in it's folder. You can see an example of what a fully loaded command looks like in Figure E below. <em>If type more then what will fit on one line of the command line window it will just move to the next line. it can look a bit confusing but it knows you want it to all be on the same line.</em></p>
+          <div class="card mb-3">
+              <a href="imgs/figE.png" data-toggle="lightbox" data-title="A fully loaded command" data-footer="Figure E"><center><img class="img-fluid side-image" src="imgs/figE.png"></center></a>
+              <div class="card-footer text-muted">
+                Figure E | Click to Expand&nbsp;<i class="fas fa-expand-alt"></i>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
+        <div class="thick-padding"></div>
+      </div>
+      
+      <footer class="footer mt-auto py-3">
+        <div class="container">
+          <p class="text-muted">Author: Evan Spiker | Created: 3/3/2020 | v1.0</p>
+        </div>
+      </footer>      
+    </main>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Lightbox script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js" integrity="sha256-Y1rRlwTzT5K5hhCBfAFWABD4cU13QGuRN6P5apfWzVs=" crossorigin="anonymous"></script>
+    <!-- invoke the lightbox -->
+    <script>
+      $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+    </script>
+  </body>
+</html>
