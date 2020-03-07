@@ -48,7 +48,7 @@ Argument | Overview | Required?
 `/templates <path to folder>`|Specify the source folder of all the templates. Templates must be in docx format. If ommitted the program will assume all templates are in the same directory as the program.|:x:
 `/outfolder <path to folder>`|Specify the desitnation folder for all processed files. All resulting files will be named "[current time]-[number processed].docx". If ommitted the program will place all processed files into the same directory as the program.|:x:
 `/errorlog <path to file>`|Specify the file where any errors that occure during the file processing will be saved. If ommitted the program will create a file named "[current time].errors.log" in the same directory as the program.|:x:
-`/delimiter <character>`|Specify the delimiter in the source file. Must be a single character. If ommited the program will assume '\|' is the delimiter. Some characters like '\' and '"' are unavaliable.|:x:
+`/delimiter <character>`|Specify the delimiter in the source file. Must be a single character. If ommited the program will assume '\|' is the delimiter. Some characters like '\\' and '"' are unavaliable.|:x:
 `/help`|Prints out the usage information and short explanation.|:x:
 `/help-all`|Opens full documentation.|:x:
 
